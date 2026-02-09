@@ -295,15 +295,6 @@
             <p class="question">Willst du mein Valentine sein? 💕</p>
             
             <form id="valentineForm" action="https://formspree.io/f/xlgwdavz"method="POST">
-                <div class="form-group">
-                    <label for="name">Dein Name:</label>
-                    <input type="text" id="name" name="name" required placeholder="Gib deinen Namen ein...">
-                </div>
-
-                <div class="form-group">
-                    <label for="email">Deine E-Mail:</label>
-                    <input type="email" id="email" name="email" required placeholder="deine@email.de">
-                </div>
 
                 <div class="form-group">
                     <label>Deine Antwort:</label>
@@ -374,8 +365,6 @@
             e.preventDefault();
             
             const formData = new FormData(e.target);
-            const name = formData.get('name');
-            const email = formData.get('email');
             const answer = formData.get('answer');
             
             const messageDiv = document.getElementById('message');
@@ -388,12 +377,10 @@
                         'Content-Type': 'application/json'
                     },
                     body: JSON.stringify({
-                        name: name,
-                        email: email,
                         answer: answer,
                         _replyto: 'alexhennig2002@gmail.com',
-                        _subject: `Valentine Antwort von ${name}`,
-                        message: `${name} (${email}) hat geantwortet: ${answer} 💕`
+                        _subject: `Valentine Antwort von Julia`,
+                        message: `Julia hat geantwortet: ${answer} 💕`
                     })
                 });
 
