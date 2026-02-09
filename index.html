@@ -294,7 +294,7 @@
             <div class="heart-icon">💘</div>
             <p class="question">Willst du mein Valentine sein? 💕</p>
             
-            <form id="valentineForm">
+            <form id="valentineForm" action="https://formspree.io/f/xlgwdavz"method="POST">
                 <div class="form-group">
                     <label for="name">Dein Name:</label>
                     <input type="text" id="name" name="name" required placeholder="Gib deinen Namen ein...">
@@ -382,7 +382,7 @@
             
             try {
                 // Send email using Formspree (free email service)
-                const response = await fetch('https://formspree.io/f/xbljgdvy', {
+                const response = await fetch('https://formspree.io/f/xlgwdavz', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'
